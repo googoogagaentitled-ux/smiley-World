@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HiSmileyWebsite</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ffd84a'/%3E%3Ccircle cx='22' cy='26' r='4' fill='%232b2118'/%3E%3Ccircle cx='42' cy='26' r='4' fill='%232b2118'/%3E%3Cpath d='M18 36c4 10 24 10 28 0' fill='none' stroke='%232b2118' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <style>
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+        background: radial-gradient(circle at 50% 42%, #fff8dc 0%, #ffe08a 48%, #f6b73c 100%);
+        color: #3a2a12;
+      }
+      .stage {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      .face {
+        width: min(46vw, 220px);
+        aspect-ratio: 1;
+        background: #ffd84a;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 18px 36px rgba(160, 96, 0, 0.22), inset 0 -14px 0 rgba(0, 0, 0, 0.06);
+      }
+      .eye {
+        position: absolute;
+        top: 32%;
+        width: 13%;
+        aspect-ratio: 1;
+        background: #2b2118;
+        border-radius: 50%;
+      }
+      .eye.left { left: 27%; }
+      .eye.right { right: 27%; }
+      .smile {
+        position: absolute;
+        left: 22%;
+        bottom: 18%;
+        width: 56%;
+        height: 30%;
+        border: 10px solid #2b2118;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-radius: 0 0 50% 50%;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(3.25rem, 10vw, 6rem);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="stage">
+      <div class="face" role="img" aria-label="Smiley face">
+        <span class="eye left"></span>
+        <span class="eye right"></span>
+        <span class="smile"></span>
+      </div>
+      <h1>Hi</h1>
+    </main>
+  </body>
+</html>
